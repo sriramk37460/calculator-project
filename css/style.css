@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+:root {
+   --background-gradient: linear-gradient(to bottom right, #EEEEEE, #E0E3EB);
+   --color-white: #FFFFFF;
+   --color-black: #000000;
+   --color-blue: #1eb4e7;
+   --color-medium-dark: #4f4a4a;
+   --color-light-beige: #cebbbd; 
+   --color-green:#045729;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: var(--background-gradient);
+}
+
+.container {
+   max-width: 400px;
+   width: 100%;
+   border-radius: 30px;
+   padding: 20px;
+   background: var(--color-black);
+   color: var(--color-white);
+   box-shadow: 0 5px 10px rgba(166, 38, 38, 0.1);
+}
+
+.display-box { 
+   display: flex;
+   flex-direction: column;
+   margin-block: 40px 30px;
+   background-color: var(--color-white);
+}
+
+.result { 
+   font-family: 'Roboto', sans-serif;
+   width: 100%;
+   height: 30px;
+   text-align: right;
+   color: var(--color-light-beige);
+   font-weight: 300;
+}
+
+.display-input { 
+   font-size: 50px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 100;
+   height: 70px;
+   width: 100%;
+   text-align: right;
+   outline: none;
+   border: none;
+   pointer-events: none;
+   background: transparent;
+   color: var(--color-green);
+}
+
+::placeholder {
+   color: var(--color-white);
+}
+
+.buttons {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   row-gap: 15px;
+}
+
+.buttons button {
+   width: 75px;
+   height: 75px;
+   font-size: 24px;
+   font-weight: 300;
+   background-color: var(--color-medium-dark);
+   color: var(--color-white);
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.buttons .operatorbtn {
+   background-color: var(--color-blue);
+}
+
+.operatorbtn.special-button { 
+   background-color: var(--color-light-beige);
+   color: var(--color-black);
+}
+
+.buttons button:active {
+   transform: scale(0.95);
+}
+
+.buttons.button-zero, .buttons.button-double-zero { 
+   width: calc(50% - 8px);
+   border-radius: 50px;
+   text-align: left;
+   padding-left: 30px;
+}
+
+@media screen and (max-width: 376px) {
+   body {
+      background: var(--color-black);
+   }
+
+   .display-input { 
+      font-size: 40px;
+   }
+
+   .buttons {
+      row-gap: 10px;
+   }
+
+   .buttons button {
+      width: 55px;
+      height: 55px;
+      font-size: 20px;
+   }
+
+   .container {
+      max-width: 300px;
+   }
+
+   .buttons.button-zero, .buttons.button-double-zero { 
+      width: calc(50% - 8px);
+      border-radius: 50px;
+      text-align: left;
+      padding-left: 30px;
+   }
+}   
